@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Makes a Fight Song “Fight”?</title>
+  <style>
+    :root { --max: 980px; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #fff; color: #111; line-height: 1.55; }
+    header { max-width: var(--max); margin: 34px auto 8px auto; padding: 0 18px; }
+    h1 { font-size: 32px; margin: 0 0 6px 0; font-weight: 700; }
+    .sub { font-size: 16px; color: #444; margin: 0 0 18px 0; }
+    main { max-width: var(--max); margin: 0 auto; padding: 0 18px 40px 18px; }
+    h2 { font-size: 20px; margin: 22px 0 8px 0; }
+    h3 { font-size: 16px; margin: 16px 0 6px 0; }
+    p { font-size: 14px; margin: 10px 0; }
+    ul { margin: 8px 0 14px 22px; padding: 0; }
+    li { margin: 6px 0; font-size: 14px; }
+    .rule { border-top: 1px solid #e6e6e6; margin: 18px 0; }
+    .callout { background: #fafafa; border-left: 4px solid #111; padding: 12px 14px; margin: 14px 0; }
+    iframe { width: 100%; border: none; height: 980px; margin: 12px 0 8px 0; }
+    .small { font-size: 12px; color: #555; }
+    a { color: #0b5fff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>What Makes a Fight Song “Fight”?</h1>
+    <p class="sub">Big Ten fight songs compared</p>
+    <p class="small">
+      Created by: Srividya Ramanathan, University of Iowa
+    </p>
+    <div class="rule"></div>
+  </header>
+
+  <main>
+    <h2>Overview and Dataset</h2>
+    <p>
+      I wanted to understand how fight songs differ across schools and across time by comparing their structure,
+      language, and rhythm. This project includes two visualizations. One focuses on musical composition. The
+      other focuses on language use over time.
+    </p>
+    <p class="small">
+      Data source: FiveThirtyEight Fight Songs dataset. This entry focuses on Big Ten institutions.
+    </p>
+
+    <div class="callout">
+      <h3>How to read the main visualization</h3>
+      <ul>
+        <li>Each school is one slice of the circle, ordered by tempo (BPM).</li>
+        <li>Color shows the factor: Identity (blue), Chantiness (gray), Aggressiveness (black).</li>
+        <li>Spoke length shows level: inner ring is absent, middle ring is noticeable, outer ring is dominant.</li>
+        <li>Inner squiggles encode tempo groups using Italian tempo terms.</li>
+        <li>Hover over any spoke to see the full university name, song title, and BPM.</li>
+      </ul>
+    </div>
+
+    <h2>Fight Song Composition</h2>
+    <p>
+      This interactive volvelle-style visualization compares Big Ten fight songs across three compositional factors:
+      Identity, Chantiness, and Aggressiveness.
+    </p>
+    <p class="small">
+      Note: “Chantiness” is a term I use to describe how easy a song is to chant in a crowd.
+    </p>
+
+    <!-- MAIN VIZ -->
+    <iframe src="viz.html" title="Fight song composition visualization"></iframe>
+
+    <h3>Data Analysis</h3>
+    <p>
+      The volvelle makes it easy to compare patterns across schools without ranking them. It shows that fight songs
+      can signal school spirit in different ways. Some songs rely more on identity and chant structure. Others use
+      more confrontational language. Tempo adds another layer. Faster songs often feel more energetic, but speed does
+      not always match lyrical aggression.
+    </p>
+
+    <div class="rule"></div>
+
+    <h2>The Word “Fight” Over Time</h2>
+    <p>
+      The second visualization looks at language use over time. It focuses on how often fight songs use the word
+      “fight,” and how this changes across years.
+    </p>
+    <div class="callout">
+      <h3>How to read the second visualization</h3>
+      <ul>
+        <li>Each point is one song.</li>
+        <li>The x-axis is year.</li>
+        <li>Point size shows how many times the word “fight” appears in the lyrics.</li>
+        <li>Color shows whether usage is absent, noticeable, or dominant.</li>
+      </ul>
+    </div>
+
+    <!-- SECOND VIZ -->
+    <iframe src="viz2.html" title="Fight word mentions over time"></iframe>
+
+    <h3>Data Analysis</h3>
+    <p>
+      The timeline view adds context to the compositional comparison. It shows that explicit use of the word “fight”
+      is not constant across eras. Some periods use direct language more often, while others lean more on identity
+      and tradition without repeating the word itself.
+    </p>
+
+    <div class="rule"></div>
+
+    <h2>Data Sources and References</h2>
+    <ul>
+      <li>Dataset: FiveThirtyEight Fight Songs dataset</li>
+      <li>Tools: Python, pandas, Plotly</li>
+      <li>Design inspiration: volvelle style circular comparison</li>
+      <li>University of Iowa inspiration: Paper Engineering in Art, Science, and Education exhibition (add link here if you have one)</li>
+    </ul>
+
+    <p class="small">
+      If you are viewing this during Championship voting, the page requires no login and is meant to be explored by hovering over marks.
+    </p>
+  </main>
+</body>
+</html>
