@@ -82,6 +82,19 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 12px;
     }
+
+    /* ---- WIDER WRAPPER FOR MAIN VIZ (fix hover clipping) ---- */
+    .viz-wrap{
+      width: min(1400px, 100vw);
+      margin: 0 auto;
+    }
+    .viz-frame{
+      width: 100%;
+      height: 1100px;
+      border: none;
+      display: block;
+      margin: 12px 0 8px 0;
+    }
   </style>
 </head>
 
@@ -121,13 +134,15 @@
       Tempo is shown separately as a musical attribute.
     </p>
 
-<!-- MAIN VIZ (no scrollbars, no clipping) -->
-<iframe
-  src="viz.html"
-  title="Fight song composition visualization"
-  style="width:100%; height:1100px; border:none; display:block;"
-  scrolling="no">
-</iframe>
+    <!-- MAIN VIZ (wider wrapper to prevent hover clipping, no scrollbars) -->
+    <div class="viz-wrap">
+      <iframe
+        class="viz-frame"
+        src="viz.html"
+        title="Fight song composition visualization"
+        scrolling="no">
+      </iframe>
+    </div>
 
     <h3>Data analysis</h3>
     <p>
@@ -185,7 +200,6 @@
     </p>
     <p>
       The pattern varies across periods and is presented descriptively.
-      
     </p>
 
     <div class="rule"></div>
